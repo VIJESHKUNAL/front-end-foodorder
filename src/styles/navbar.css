@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Apply the font to the entire navbar */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .navbar {
+    background-color: #333;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .nav-logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .nav-button {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(45deg, #ff6347, #ff4500);
+    border: none;
+    border-radius: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .nav-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cart-button {
+    background: linear-gradient(45deg, #ff4500, #ff6347);
+  }
+  
+  .nav-search {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    font-size: 1rem;
+    width: 200px;
+    transition: width 0.3s ease;
+  }
+  
+  .search-input:focus {
+    width: 250px;
+  }
+  
+  .search-button {
+    padding: 0.5rem 1rem;
+    background-color: #ff6347;
+    border: none;
+    color: #fff;
+    border-radius: 25px;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .search-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .nav-auth {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .auth-button {
+    color: #a5a1a1;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(45deg, #ff6347, #ff4500);
+    border-radius: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .auth-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-toggle {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  
+  .dropdown-toggle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .dropdown-content .dropdown-item {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dropdown-content .dropdown-item:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav-buttons,
+    .nav-auth {
+      flex-direction: column;
+      width: 100%;
+      gap: 0;
+    }
+  
+    .nav-button,
+    .auth-button {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .nav-search {
+      margin-top: 1rem;
+      width: 100%;
+    }
+  
+    .search-input {
+      width: calc(100% - 2.5rem);
+    }
+  
+    .search-button {
+      width: 2.5rem;
+    }
+  }
+  
