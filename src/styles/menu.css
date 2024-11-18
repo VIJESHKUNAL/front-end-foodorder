@@ -1,0 +1,65 @@
+.menu-section {
+    position: relative;
+    padding: 6rem;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease-in-out;
+    color: rgb(96, 93, 93);
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .menu-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: white;
+  }
+  
+  .food-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .food-item-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    text-align: center;
+    color: inherit;
+  }
+  
+  .food-item-button:hover .food-item {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .food-image {
+    width: 200%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .food-item h3 {
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+  }
+  
+  .food-item p {
+    margin: 0.25rem 0;
+  }
+  
+  @media (max-width: 768px) {
+    .food-menu {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .food-item {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+  
